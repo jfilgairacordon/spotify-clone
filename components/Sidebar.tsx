@@ -28,10 +28,8 @@ const Sidebar = () => {
     }
   }, [session, spotifyApi])
 
-  console.log(playlistId)
-
   return (
-    <div className="h-screen overflow-y-scroll border-r border-gray-900 p-5 text-sm text-gray-500 scrollbar-hide">
+    <div className="h-screen overflow-y-scroll border-r border-gray-900 p-5 text-xs lg:text-sm text-gray-500 scrollbar-hide">
       <div className="space-y-4">
         <button
           onClick={() => signOut()}

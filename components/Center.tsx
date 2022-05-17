@@ -9,11 +9,12 @@ import {
   playlistState,
 } from '../atoms/playlistAtom'
 import useSpotify from '../hooks/useSpotify'
+import Songs from './Songs'
 
 const colors = [
   'from-indigo-500',
   'from-blue-500',
-  'from-greem-500',
+  'from-green-500',
   'from-red-500',
   'from-yellow-500',
   'from-pink-500',
@@ -56,9 +57,16 @@ export default function Center() {
       <section
         className={`flex h-80 items-end space-x-7 bg-gradient-to-b ${color} to-black p-8 text-white`}
       >
-        <h1>Hello</h1>
-        {/* <img src="" alt="" /> */}
+        <img className='w-44 h-44 shadow-2xl' src={playlist?.images[0].url || ""} alt="" />
+        <div>
+          <p>LISTA</p>
+          <h1 className='font-bold text-2xl md:text-3xl xl:text-5xl'>{ playlist?.name }</h1>
+        </div>
       </section>
+
+      <div>
+        <Songs />
+      </div>
     </div>
   )
 }
